@@ -164,7 +164,6 @@ impl Board {
 
     pub fn merge(&mut self, i_arr: &Vec<Vec<i32>>) {
         for arr in i_arr {
-            println!("{:#?}", (1..arr.len()).rev());
             for i in (1..arr.len()).rev() {
                 if self.0[get_index(arr[i])[0] as usize][get_index(arr[i])[1] as usize]
                     == self.0[get_index(arr[i - 1 as usize])[0] as usize]
